@@ -1,54 +1,52 @@
-# CPO_LW - lab 3 - variant 1
+# CPO-lab3
+Computational Process Organization lab3
+## title: Mathematical expression
+## laboratory work number: 1b
 
-In lab 3, *Basic Model of Computational*, variant 1 aims to
-parse mathematical expressions by expression trees.
+### variant description: Mathematical expression
+• Input language is a sting like a + 2 - sin(-0.3)*(b - c).
+• Should support user-specific functions by passing something like {"foo": lambda x:x*42 } or by named arguments.
+• Run-time error should be processed correctly.
+• You should use the default Python logging module to make the interpreter work trans-parent.
+• Visualization as a dataflow graph (see Fig. 5.3) and as a dataflow graph with trace annotation (see listing 1). A specific graph representation depends on your sub-variant.
 
-## Project structure
+### Synopsis:
+I use the RPN(suffix expression) to transfer the formula become easy to computation.
+e.g.:（3+4）*5-6 -> 34+5*6-
+RPN(Reverse Polish Notation):
+There are no brackets in the Reverse Polish Notation. 
+In the calculation, the first number before the operator is used as the right operand, and the second number is used as the left operand. 
+The value obtained will continue to be put into the RPN.
 
-- `expression_tree.py` -- includes class `Node` with methods `__init__` and `get_priority`,
- class `ExpressTree` with methods `__init__`, `__preprocess`, `__build_express_tree`,
- `__update_value`, `__call__`, `visualization`,
- and function `arg_type` as a decorator for checking input datas.
+### Contribution summary for each group member: 
 
-- `expression_tree_test.py` -- unit tests for `expression_tree.py`.
+Work by Zhou Wu Bin :
 
-## Features
+1. design the main mathematical code 
 
-- class `Node`:
-  - `__init__`: Instantiate a node of expression tree
- (non-leaf - function; leaf - constant).
-  - `get_priority`: Get the priority of function.
+Work by Li Jingwen:
 
-- class `ExpressTree`:
-  - `__init__`: Create an expression tree.
-  - `__preprocess`: Preprocessing the input string expression.
-  - `__build_express_tree`: Building an expression tree
-   according to the preprocessed string expression.
-  - `__update_value`: Reducing the expression tree in a result (from leaves to root).
-  - `__call__`: Input constants, reduce the expression.
-  - `visualization`: Visualization the expression tree.
+1. test, debug
 
-## Contribution
+##  descriptions of  modules
+#### In MathExpression from mathExpCal
+ def RPN： change the origin string into RPN string
+ def calc: calculate the RPN string
+ def visualize: generate the dot.source
+ 
+#### In MathExpression from mathExpCal
+We test +, -, *, /, sin, cos, tan, pow, log and func(), by some formulas.
+Such as:
+- cos(0)+tan(0.3)*sin(0)
+- 19-14.21*20.91
+- cos((3-a)*b)+func(c,d)/3
+- a + 2 - sin(0.3)*(b - c)
+......
 
-- Li Liquan (212320016@hdu.edu.cn)
-  - GitHub repository created
-  - implement classes `Node`, `ExpressTree`
+### Conclusion
+In this lab, we completed the string conversion to RPN, and successfully calculated the value of each formula.
 
-- Wang Zimeng (1372178297@qq.com)
-  - implement tests and input data control: class `TestExpressTree`, decorator `arg_type`.
-  - write `README.md`
+We have completed the functions: +, -, *, /, sin, cos, tan, pow, log and can accept input functions: func().
 
-## Changelog
-
-- 23.5.2022 11:55 -3
-  - Wang Zimeng commits codes and `README.md`.
-- 18.5.2022 19:40 -2
-  - Li Liquan commits codes.
-- 18.5.2022 19:13 -1
-  - Build the project framework.
-
-## Design notes
-
-- Input type: string.
-- In expression tree, functions are parsed as non-leaf nodes and constants as leave.
-- Users can customize functions as non-leaf nodes of the expression tree.
+Finally, we visualize the process of computation.
+      
