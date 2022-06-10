@@ -157,7 +157,6 @@ class MathExpression(object):
     # the dot will output to a file
     @negative_test
     def visualize(self, num):
-        # """dot pic.dot -T png -o pic.png"""
         res = list()
         res.append('digraph G {')
         res.append(' rankdir=BT;')

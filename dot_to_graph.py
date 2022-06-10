@@ -1,11 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sat Jun 26 04:36:32 2021
-
-@author: cptw
-"""
-# -*- coding: UTF-8 -*-
-
 import os
 
 print('transfer...')
