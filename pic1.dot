@@ -1,0 +1,18 @@
+digraph G {
+ rankdir=BT;
+ n_0[label="0"];
+ n_1[label="cos"];
+ n_2[label="0.3"];
+ n_3[label="tan"];
+ n_4[label="0"];
+ n_5[label="sin"];
+ n_6[label="*"];
+ n_7[label="+"];
+n_0 -> n_1;
+n_2 -> n_3;
+n_4 -> n_5;
+n_5 -> n_6;
+n_3 -> n_6;
+n_6 -> n_7;
+n_1 -> n_7;
+}

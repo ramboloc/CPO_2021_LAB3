@@ -1,0 +1,13 @@
+digraph G {
+ rankdir=BT;
+ n_0[label="8"];
+ n_1[label="12"];
+ n_2[label="-"];
+ n_3[label="10"];
+ n_4[label="func"];
+ n_5[label="*"];
+n_1 -> n_2;
+n_0 -> n_2;
+n_4 -> n_5;
+n_3 -> n_5;
+}

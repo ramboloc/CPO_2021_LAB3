@@ -1,0 +1,22 @@
+digraph G {
+ rankdir=BT;
+ n_0[label="a"];
+ n_1[label="2"];
+ n_2[label="+"];
+ n_3[label="0.3"];
+ n_4[label="sin"];
+ n_5[label="b"];
+ n_6[label="c"];
+ n_7[label="-"];
+ n_8[label="*"];
+ n_9[label="-"];
+n_1 -> n_2;
+n_0 -> n_2;
+n_3 -> n_4;
+n_6 -> n_7;
+n_5 -> n_7;
+n_7 -> n_8;
+n_4 -> n_8;
+n_8 -> n_9;
+n_2 -> n_9;
+}
