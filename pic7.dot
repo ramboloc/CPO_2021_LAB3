@@ -1,8 +1,0 @@
-digraph G {
- rankdir=BT;
- n_0[label="77"];
- n_1[label="6"];
- n_2[label="/"];
-n_1 -> n_2;
-n_0 -> n_2;
-}
