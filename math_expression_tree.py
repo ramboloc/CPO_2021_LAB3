@@ -85,7 +85,8 @@ class MathExpression(object):
                 continue
 
             if i == ')':
-                # The expressions in brackets operate first, and the () is not needed in the conv_form
+                # The expressions in brackets operate first
+                # and the () is not needed in the conv_form
                 while op_stack[-1] != '(':
                     self.postfix_form.append(op_stack.pop(-1))
                 op_stack.pop(-1)
@@ -94,8 +95,10 @@ class MathExpression(object):
                     self.postfix_form.append(op_stack.pop(-1))
                 continue
 
-            # continue the str operation, the '+', '-', '*', '/', Identified, but not yet used
-            while len(op_stack) != 0 and op_levels[op_stack[-1]] >= op_levels[i]:
+            # continue the str operation, the '+', '-', '*', '/'
+            # Identified, but not yet used
+            while len(op_stack) != 0 and \
+                    op_levels[op_stack[-1]] >= op_levels[i]:
                 self.postfix_form.append(op_stack.pop(-1))
             op_stack.append(i)
 
