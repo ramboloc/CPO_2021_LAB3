@@ -106,8 +106,8 @@ class MathExpression(object):
             self.postfix_form.append(op_stack.pop(-1))
 
     @negative_test
-    def calc(self, **kwargs):
-        """ Calculation formula, simulating trees with stacks """
+    def calculate(self, **kwargs):
+        """ calculateulation formula, simulating trees with stacks """
         stack = list()
         self.values = kwargs
         # e.g.:（3+4）*5-6 -> 34+5*6-
