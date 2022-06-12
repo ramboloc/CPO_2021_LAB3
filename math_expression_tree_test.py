@@ -8,7 +8,8 @@ class MathExpressionTest(unittest.TestCase):
         i = MathExpression('cos(0)+tan(0.3)*sin(0)')
         i.to_Postfix()
         i.visualize(1)
-        self.assertEqual(i.calculate(), math.cos(0) + math.tan(0.3) * math.sin(0))
+        self.assertEqual(i.calculate(),
+                         math.cos(0) + math.tan(0.3) * math.sin(0))
 
     def test_add(self):
         i = MathExpression('22.2+33.3+44.4')
