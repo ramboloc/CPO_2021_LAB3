@@ -1,4 +1,4 @@
-# SA Spade A * lab 3 * variant 2
+# SA Spade A - lab 3 - variant 3
 
 ## Laboratory work description
 
