@@ -64,7 +64,8 @@ class MathExpressionTest(unittest.TestCase):
         i = MathExpression('cos((3-a)*b)+func(c,d)/3')
         i.to_Postfix()
         i.visualize(11)
-        self.assertEqual(i.calculate(a=3, b=2, c=20, d=10, func=lambda x, y: x + y), 11.0)
+        self.assertEqual(i.calculate(a=3, b=2, c=20, d=10,
+                                     func=lambda x, y: x + y), 11.0)
 
 
 if __name__ == '__main__':

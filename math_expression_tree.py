@@ -72,7 +72,6 @@ class MathExpression(object):
                 flag_long_str = 1
                 continue
 
-            # 3. (,)     
             if i == ',':
                 continue
 
