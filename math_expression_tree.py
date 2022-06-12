@@ -1,4 +1,4 @@
-from math import *
+import math
 import os
 
 # Operation level
@@ -115,11 +115,11 @@ class MathExpression(object):
         # e.g.:（3+4）*5-6 -> 34+5*6-
         for i in self.postfix_form:
             if i == 'sin':
-                stack.append(sin(stack.pop(-1)))
+                stack.append(math.sin(stack.pop(-1)))
             elif i == 'cos':
-                stack.append(cos(stack.pop(-1)))
+                stack.append(math.cos(stack.pop(-1)))
             elif i == 'tan':
-                stack.append(tan(stack.pop(-1)))
+                stack.append(math.tan(stack.pop(-1)))
             elif i == '+':
                 right = stack.pop(-1)
                 left = stack.pop(-1)
@@ -139,7 +139,7 @@ class MathExpression(object):
             elif i == 'log':
                 right = stack.pop(-1)
                 left = stack.pop(-1)
-                stack.append(log(left, right))
+                stack.append(math.log(left, right))
             elif i == 'pow':
                 right = stack.pop(-1)
                 left = stack.pop(-1)

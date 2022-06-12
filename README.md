@@ -1,18 +1,18 @@
-# SA Spade A * lab 2 * variant 2
+# SA Spade A * lab 3 * variant 2
 
 ## Laboratory work description
 
 * Input language is a sting like a + 2 * sin(*0.3)*(b * c).
 * Should support user
-* specific functions by passing something like {"foo": lambda x:x*42 } or by named arguments.
+* specific functions by passing something like {"foo": lambda x:x*42 } or named arguments.
 * Run*time error should be processed correctly.
 * You should use the default Python logging module to make the interpreter work trans*parent.
 * Visualization as a dataflow graph (see Fig. 5.3) and as a dataflow graph with trace.
 
 ## Project structure
 
-* `math_expression_tree.py` ** includes class `MathExpression`
-* `math_expression_tree_test.py` ** unit and PBT tests for classes and functions in `math_expression_tree.py`.
+* `math_expression_tree.py`: includes class `MathExpression`
+* `math_expression_tree_test.py`: unit and PBT tests for classes and functions.
 
 ## Features
 
@@ -22,7 +22,7 @@
 * `calculate(self, **kwargs)`: Evaluate the result of an expression.
 * `visualize(self, num)`: Visualize expressions.
 
-### Contribution summary for each group member: 
+## Contribution summary for each group member
 
 * Wu Bin
   * GitHub repository created
